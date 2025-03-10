@@ -12,15 +12,15 @@ Git (Install Guide)
 Docker (Install Guide)
 VS Code (or any code editor) (Download VS Code)
 
-### Step 1: Setting Up the AKS Cluster using Terraform
+## Step 1: Setting Up the AKS Cluster using Terraform
 
-## 1.1 Login to Azure CLI
+### 1.1 Login to Azure CLI
     az login
 
-## 1.2 Set up a Terraform project directory
+### 1.2 Set up a Terraform project directory
     mkdir aks-terraform && cd aks-terraform
 
-## 1.3 Create a Terraform configuration file (main.tf)
+### 1.3 Create a Terraform configuration file (main.tf)
 
 Create the main.tf file using the following command:
 
@@ -66,18 +66,18 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
 }
 
 
-## 1.4 Initialize and Apply Terraform
+### 1.4 Initialize and Apply Terraform
 
 terraform init
 terraform apply -auto-approve
 
-## 1.5 Configure kubectl to access the AKS cluster
+### 1.5 Configure kubectl to access the AKS cluster
 
 az aks get-credentials --resource-group aks-resource-group --name myAKSCluster
 
-### Step 2: Deploy a Simple Nginx Application
+## Step 2: Deploy a Simple Nginx Application
 
-2.1 Create Kubernetes Deployment YAML (deployment.yaml)
+### 2.1 Create Kubernetes Deployment YAML (deployment.yaml)
 
 Create the deployment.yaml file:
 
@@ -106,7 +106,7 @@ spec:
           ports:
             - containerPort: 80
 
-2.2 Create Kubernetes Service YAML (service.yaml)
+### 2.2 Create Kubernetes Service YAML (service.yaml)
 
 Create the service.yaml file:
 
@@ -128,42 +128,42 @@ spec:
       targetPort: 80
   type: LoadBalancer
 
-2.3 Apply the Kubernetes YAML files
+### 2.3 Apply the Kubernetes YAML files
 
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 
-Step 3: Verify Deployment
+## Step 3: Verify Deployment
 
-3.1 Check pod status
+### 3.1 Check pod status
 
 kubectl get pods
 
-3.2 Get the external IP address of the service
+### 3.2 Get the external IP address of the service
 
 kubectl get service nginx-service
 
-3.3 Test the application
+### 3.3 Test the application
 
 curl http://<EXTERNAL_IP>
 
 Or open it in a browser.
 
-Step 4: Upload Project to GitHub
+## Step 4: Upload Project to GitHub
 
-4.1 Initialize Git and Commit Files
+### 4.1 Initialize Git and Commit Files
 
 git init
 git add .
 git commit -m "Initial commit"
 
-4.2 Create a GitHub Repository and Push the Code
+### 4.2 Create a GitHub Repository and Push the Code
 
 git remote add origin <your-repo-url>
 git branch -M main
 git push -u origin main
 
-Troubleshooting
+## Troubleshooting
 
 Issue: subscription_id error
 
