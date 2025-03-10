@@ -21,13 +21,13 @@ VS Code (or any code editor) (Download VS Code)
     mkdir aks-terraform && cd aks-terraform
 
 ### 1.3 Create a Terraform configuration file (main.tf)
+    Create the main.tf file using the following command:
 
-Create the main.tf file using the following command:
-
-notepad main.tf  # Windows
-nano main.tf  # Linux/Mac
+    notepad main.tf  # Windows
+    nano main.tf  # Linux/Mac
 
 Add the following content:
+
 
 terraform {
   required_providers {
