@@ -226,4 +226,14 @@ kubectl describe service nginx-service
 - 📌 [Azure Kubernetes Service (AKS) Quickstart](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal)
 
 
+## Access the Deployed Application
+
+After deploying the Nginx application to AKS, you can access it using the following URL:
+
+- **Application URL:** [http://48.217.8.171/]
+
+
+
+
+
 
