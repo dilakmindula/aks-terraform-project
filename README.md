@@ -14,15 +14,13 @@ VS Code (or any code editor) (Download VS Code)
 
 ### Step 1: Setting Up the AKS Cluster using Terraform
 
-1.1 Login to Azure CLI
+## 1.1 Login to Azure CLI
+    az login
 
-az login
+## 1.2 Set up a Terraform project directory
+    mkdir aks-terraform && cd aks-terraform
 
-1.2 Set up a Terraform project directory
-
-mkdir aks-terraform && cd aks-terraform
-
-1.3 Create a Terraform configuration file (main.tf)
+## 1.3 Create a Terraform configuration file (main.tf)
 
 Create the main.tf file using the following command:
 
@@ -67,16 +65,17 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
   }
 }
 
-1.4 Initialize and Apply Terraform
+
+## 1.4 Initialize and Apply Terraform
 
 terraform init
 terraform apply -auto-approve
 
-1.5 Configure kubectl to access the AKS cluster
+## 1.5 Configure kubectl to access the AKS cluster
 
 az aks get-credentials --resource-group aks-resource-group --name myAKSCluster
 
-Step 2: Deploy a Simple Nginx Application
+### Step 2: Deploy a Simple Nginx Application
 
 2.1 Create Kubernetes Deployment YAML (deployment.yaml)
 
