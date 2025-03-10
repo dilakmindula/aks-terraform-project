@@ -1,26 +1,18 @@
-Azure Kubernetes Service (AKS) Deployment using Terraform
+# Azure Kubernetes Service (AKS) Deployment using Terraform
 
-Overview
-
+## Overview
 This guide provides step-by-step instructions to set up an Azure Kubernetes Service (AKS) cluster using Terraform and deploy a simple Nginx application.
 
-Prerequisites
-
+## Prerequisites
 Ensure you have the following installed:
-
 Azure CLI (Install Guide)
-
 Terraform (Install Guide)
-
 kubectl (Install Guide)
-
 Git (Install Guide)
-
 Docker (Install Guide)
-
 VS Code (or any code editor) (Download VS Code)
 
-Step 1: Setting Up the AKS Cluster using Terraform
+### Step 1: Setting Up the AKS Cluster using Terraform
 
 1.1 Login to Azure CLI
 
