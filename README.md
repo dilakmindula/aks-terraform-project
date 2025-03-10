@@ -190,23 +190,6 @@ curl http://<EXTERNAL_IP>
 
 Or open it in a browser.
 
-## Step 4: Upload Project to GitHub
-
-### 4.1 Initialize Git and Commit Files
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-### 4.2 Create a GitHub Repository and Push the Code
-
-```bash
-git remote add origin <your-repo-url>
-git branch -M main
-git push -u origin main
-```
 
 ## Troubleshooting
 
@@ -242,15 +225,5 @@ kubectl describe service nginx-service
 - 📌 [Kubernetes Basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
 - 📌 [Azure Kubernetes Service (AKS) Quickstart](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal)
 
-## Conclusion
 
-Following this guide, you have successfully:
-
-- ✅ Created an AKS cluster using Terraform
-- ✅ Deployed a simple Nginx application
-- ✅ Verified that the application is running
-- ✅ Uploaded your project to GitHub
-
-If you encounter any issues, refer to the troubleshooting section or check the provided learning resources. 🚀
-```
 
